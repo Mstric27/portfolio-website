@@ -1,0 +1,16 @@
+/* Profile image box */
+.about__me {
+  aspect-ratio: 1/1;
+  border-radius: 2rem;
+  background: var(--bs-primary);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.about__me-image {
+  border-radius: 2rem;
+  overflow: hidden;
+}

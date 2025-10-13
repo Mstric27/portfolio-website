@@ -1,0 +1,26 @@
+.skills__container {
+  max-width: 600px;
+}
+
+.skills__card {
+  background: var(--bs-secondary);
+  border: 1px solid transparent;
+  border-radius: 1rem;
+  transition: all 0.4s ease;
+}
+
+.skills__card:hover {
+  background: transparent;
+  border-color: var(--bs-primary);
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.skill .icons {
+  color: var(--bs-primary);
+}

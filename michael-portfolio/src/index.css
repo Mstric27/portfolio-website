@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+/* ================= THEME COLORS ================= */
+:root {
+  --bs-body-bg: #1f1f38;                     /* background */
+  --bs-body-color: #fff;                     /* default text */
+  --bs-primary: #f474fd;                     /* primary (pink/purple) */
+  --bs-primary-rgb: 244, 116, 253;
+  --bs-secondary: #2c2c6c;                   /* secondary bg variant */
+  --bs-light: rgba(255, 255, 255, 0.6);      /* light text */
+  --bs-dark: #1f1f38;
+  --transition: all 0.4s ease;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bs-body-bg);
+  color: var(--bs-body-color);
+  line-height: 1.7;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+/* optional: hide scrollbar */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* ================= HEADINGS ================= */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+/* ================= SECTIONS ================= */
+section {
+  margin-top: 0rem;
+}
+
+section > h2,
+section > h5 {
+  text-align: center;
+  color: var(--bs-light);
+}
+
+section > h2 {
+  color: var(--bs-primary);
+  margin-bottom: 2rem;
+}
+
+/* ================= LINKS ================= */
+a {
+  color: var(--bs-primary);
+  text-decoration: none;
+  transition: var(--transition);
+}
+a:hover {
+  color: var(--bs-body-color);
+}
+
+/* ================= BUTTONS ================= */
+/* Bootstrap already has .btn and .btn-primary — these are just overrides */
+.btn {
+  border-radius: 0.4rem;
+  transition: var(--transition);
+}
+
+.btn-primary {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+  color: var(--bs-dark);
+}
+.btn-primary:hover {
+  background-color: #fff;
+  color: var(--bs-dark);
+  border-color: transparent;
+}
+
+/* ================= IMAGES ================= */
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}

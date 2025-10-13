@@ -1,0 +1,39 @@
+header {
+  padding-top: 5rem;
+  background-image: url("../../assets/backdrop.png");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  min-height: 100vh; /* full screen */
+  display: flex;
+  align-items: center;
+}
+
+/* container is handled by Bootstrap, we just need text-center override */
+.header__container {
+  text-align: center;
+  position: relative;
+}
+
+header h1 {
+  font-size: clamp(3rem, 6vw, 5rem);
+}
+
+header h5 {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+header p {
+  font-size: clamp(1.25rem, 2.5vw, 2rem);
+}
+
+p::after {
+  content: "|";
+  display: inline-block;
+  animation: typing 0.4s infinite alternate;
+}
+
+@keyframes typing {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
