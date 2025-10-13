@@ -1,7 +1,7 @@
 {
   "name": "michael-portfolio",
   "version": "0.1.0",
-  "homepage": "https://mstric27.github.io/portfolio-website",
+  "homepage": "https://michaelpstrickland.com",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
