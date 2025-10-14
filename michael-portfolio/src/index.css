@@ -2,14 +2,14 @@
 
 /* ================= THEME COLORS ================= */
 :root {
-  --bs-body-bg: #1f1f38;                     /* background */
-  --bs-body-color: #fff;                     /* default text */
-  --bs-primary: #f474fd;                     /* primary (pink/purple) */
-  --bs-primary-rgb: 244, 116, 253;
-  --bs-secondary: #2c2c6c;                   /* secondary bg variant */
-  --bs-light: rgba(255, 255, 255, 0.6);      /* light text */
-  --bs-dark: #1f1f38;
-  --transition: all 0.4s ease;
+  --bs-body-bg: #0f1d37;                     /* deep navy base */
+  --bs-body-color: #e0e6f0;                  /* soft off-white/blue-gray text */
+  --bs-primary: #3a7bd5;                     /* calm medium blue */
+  --bs-primary-rgb: 58, 123, 213;
+  --bs-secondary: #1c2f4a;                   /* muted dark blue for contrast */
+  --bs-light: rgba(255, 255, 255, 0.55);     /* gentle light text */
+  --bs-dark: #0f1d37;                        /* consistent base */
+  --transition: all 0.3s ease;
 }
 
 body {

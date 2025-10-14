@@ -1,27 +1,29 @@
 import "./portfolio.css";
-import IMAGE1 from "../../assets/myself.jpg";
+import BitBox_Thumbnail from "../../assets/bitbox.png"
+import Classroom1b_Thumbnail from "../../assets/classroom1b.png"
+import BrilliantQR_Thumbnail from "../../assets/brilliantqr.png"
 
 const data = [
   {
     id: 1,
-    image: IMAGE1,
+    image: BitBox_Thumbnail,
     title: "BitBox - Board Game Identifier",
     github: "https://github.com/Mstric27/BitBox",
     demo: "https://www.youtube.com/watch?v=NcveBjLxhbw",
   },
   {
     id: 2,
-    image: IMAGE1,
+    image: Classroom1b_Thumbnail,
     title: "Classroom1b",
     github: "",
-    demo: "",
+    demo: "https://youtu.be/OYbQwuoWabE",
   },
   {
     id: 2,
-    image: IMAGE1,
+    image: BrilliantQR_Thumbnail,
     title: "BrilliantQR",
     github: "",
-    demo: "",
+    demo: "https://youtu.be/Dpz9w_azVqQ",
   }
 ];
 
@@ -41,21 +43,23 @@ const Portfolio = () => {
                 <div className="card-body">
                   <h5 className="card-title">{title}</h5>
                   <div className="d-flex gap-2">
-                    <a
-                      href={github}
-                      className="btn btn-outline-primary btn-sm"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      GitHub
-                    </a>
+                    {github && github.trim() !== "" && (
+                      <a
+                        href={github}
+                        className="btn btn-outline-primary btn-sm"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        GitHub
+                      </a>
+                    )}
                     <a
                       href={demo}
                       className="btn btn-primary btn-sm"
                       target="_blank"
                       rel="noreferrer"
                     >
-                      Live Demo
+                      Demo
                     </a>
                   </div>
                 </div>
