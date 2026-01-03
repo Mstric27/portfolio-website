@@ -20,14 +20,15 @@ const About = () => {
           {/* Content */}
           <div className="col-12 col-md-7">
             <h4>
-              Hello! I am a senior at the University of South Florida 
-              pursuing a B.S. in Computer Science, with interests in full-stack 
-              development and a focus on back-end engineering. 
-              I have experience building scalable web platforms, 
-              high-performance C++ applications, and mobile solutions 
-              across finance, education, and logistics. I enjoy tackling 
-              complex technical challenges, optimizing performance, and 
-              delivering impactful, user-focused software.
+              Hello! I am a recent Summa Cum Laude graduate from the University 
+              of South Florida with a B.S. in Computer Science, specializing 
+              in full-stack development with a strong focus on back-end engineering. 
+            </h4>
+            <h4 className="mt-4">
+              I have experience building scalable web platforms, high-performance 
+              C++ applications, and mobile solutions across finance, education, and 
+              logistics. I enjoy tackling complex technical challenges, optimizing 
+              performance, and delivering impactful, user-focused software.
             </h4>
             <h4 className="mt-4">
               Beyond coding, I'm an avid board game enthusiast with a 

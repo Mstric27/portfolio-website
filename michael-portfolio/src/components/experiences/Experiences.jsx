@@ -10,9 +10,9 @@ const Experiences = () => {
         <article className="experience text-center mb-4">
           <div className="experience__avatar">
             <img
-              src="https://media.licdn.com/dms/image/v2/C4E0BAQG7al3xCd5Fdg/company-logo_200_200/company-logo_200_200/0/1648739574007/sumo_capital_llc_logo?e=1762992000&v=beta&t=7T2NQj6Nw5nMpgIEYO8G_9tndyN2fDeO1LMpfLHhQKQ"
+              src="https://sumo.co/wp-content/themes/sumotheme/images/sumo_logo_icon.svg"
               alt="Sumo Capital logo"
-              className="img-fluid"
+              className="img-fluid sumo"
             />
           </div>
           <h5 className="experience__name">Sumo Capital</h5>

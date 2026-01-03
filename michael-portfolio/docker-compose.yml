@@ -1,0 +1,27 @@
+services:
+  web:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+      # optional, sometimes helps with file events:
+      # - WATCHPACK_POLLING=true
+
+    develop:
+      watch:
+        # Sync your source into the container
+        - action: sync
+          path: .
+          target: /app
+          ignore:
+            - node_modules/
+            - .git/
+            - dist/
+            - build/
+
+        # If dependencies change, rebuild the image
+        - action: rebuild
+          path: package.json
+        - action: rebuild
+          path: package-lock.json
