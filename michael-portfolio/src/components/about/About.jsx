@@ -20,23 +20,39 @@ const About = () => {
           {/* Content */}
           <div className="col-12 col-md-7">
             <h4>
-              Hello! I am a recent Summa Cum Laude graduate from the University 
-              of South Florida with a B.S. in Computer Science, specializing 
-              in full-stack development with a strong focus on back-end engineering. 
+              Hello! I am a software engineer and Summa Cum Laude graduate of the 
+              University of South Florida with a B.S. in Computer Science. I specialize 
+              in full-stack development, with a strong focus on back-end engineering, 
+              system architecture, and AI-driven software development. 
             </h4>
             <h4 className="mt-4">
-              I have experience building scalable web platforms, high-performance 
-              C++ applications, and mobile solutions across finance, education, and 
-              logistics. I enjoy tackling complex technical challenges, optimizing 
-              performance, and delivering impactful, user-focused software.
+              Currently, I'm an Associate Software Engineer at ReliaQuest, 
+              where I build features for an enterprise security operations 
+              platform using Java, Spring Boot, JavaScript, and React. I 
+              incorporate AI-assisted development into my daily workflow, 
+              leveraging tools like Claude to accelerate implementation, 
+              automate software development processes, and dedicate more 
+              time to architectural decisions and complex engineering challenges.
             </h4>
             <h4 className="mt-4">
-              Beyond coding, I'm an avid board game enthusiast with a 
-              special love for space-themed, area control, and 4X strategy 
-              games. I often recommend Dune: Imperium to newcomers looking 
-              for a rich, thematic experience, while for those deeply invested 
-              in the hobby, nothing compares to the epic, eight-hour space 
-              opera of Twilight Imperium: Fourth Edition.
+              My previous experience includes building high-performance 
+              C++ applications for financial data systems at Sumo Capital 
+              and developing full-stack applications as an independent 
+              contractor across education and logistics. I enjoy
+              working across the stack, improving system performance, 
+              and building reliable software that solves real-world problems.
+            </h4>
+            <h4 className="mt-4">
+              I'm currently exploring software engineering opportunities in Missouri
+              and am open to relocating to the area.
+            </h4>
+            <h4 className="mt-4">
+              Beyond software engineering, I'm an avid board game enthusiast
+              with a special love for space-themed, area-control, and 4X 
+              strategy games. I often recommend Dune: Imperium to newcomers 
+              looking for a rich, thematic experience, while for those deeply 
+              invested in the hobby, nothing compares to the epic, eight-hour 
+              space opera of Twilight Imperium: Fourth Edition.
             </h4>
 
             {/* Contact */}
