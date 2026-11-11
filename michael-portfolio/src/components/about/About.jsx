@@ -3,62 +3,70 @@ import Headshot from "../../assets/myself.jpg";
 
 const About = () => {
   return (
-    <section id="about" className="py-5">
-      <h2 className="text-primary text-center mb-5">About Me</h2>
+    <section id="about" className="about-section">
+      <div className="section-heading-wrap">
+        <p className="section-kicker">01 / Field notes</p>
+        <h2 className="section-heading">A little about the navigator.</h2>
+        <p className="section-intro">
+          The person behind the pull requests, prototypes, and very long board-game nights.
+        </p>
+      </div>
 
-      <div className="container">
+      <div className="container about__container">
         <div className="row align-items-center g-5">
-          {/* Profile image */}
           <div className="col-12 col-md-5">
-            <div className="about__me mx-auto">
+            <div className="about__portrait-wrap">
               <div className="about__me-image">
-                <img src={Headshot} alt="About" className="img-fluid" />
+                <img src={Headshot} alt="Michael Strickland" className="img-fluid" />
+              </div>
+              <span className="about__portrait-index">FIELD PORTRAIT · 01</span>
+              <div className="about__seal" aria-hidden="true">
+                <span>MS</span>
+                <small>USF · 2025</small>
               </div>
             </div>
           </div>
 
-          {/* Content */}
-          <div className="col-12 col-md-7">
-            <h4>
-              Hello! I am a software engineer and Summa Cum Laude graduate of the 
-              University of South Florida with a B.S. in Computer Science. I specialize 
-              in full-stack development, with a strong focus on back-end engineering, 
-              system architecture, and AI-driven software development. 
-            </h4>
-            <h4 className="mt-4">
-              Currently, I'm an Associate Software Engineer at ReliaQuest, 
-              where I build features for an enterprise security operations 
-              platform using Java, Spring Boot, JavaScript, and React. I 
-              incorporate AI-assisted development into my daily workflow, 
-              leveraging tools like Claude to accelerate implementation, 
-              automate software development processes, and dedicate more 
-              time to architectural decisions and complex engineering challenges.
-            </h4>
-            <h4 className="mt-4">
-              My previous experience includes building high-performance 
-              C++ applications for financial data systems at Sumo Capital 
-              and developing full-stack applications as an independent 
-              contractor across education and logistics. I enjoy
-              working across the stack, improving system performance, 
-              and building reliable software that solves real-world problems.
-            </h4>
-            <h4 className="mt-4">
-              I'm currently exploring software engineering opportunities in Missouri
-              and am open to relocating to the area.
-            </h4>
-            <h4 className="mt-4">
+          <div className="col-12 col-md-7 about__copy">
+            <p className="about__lead">
+              Hello! I'm a software engineer and Summa Cum Laude graduate of
+              the University of South Florida, where I earned a
+              B.S. in Computer Science with a 3.91 GPA. I build reliable
+              full-stack software, with experience in backend engineering,
+              system design, integrations, and AI-assisted development.
+            </p>
+            <p>
+              Since March 2026, I've been an Associate Software Engineer at
+              ReliaQuest. I lead foundational work on reusable access-control
+              software, co-led a six-person team through an internal ServiceNow
+              migration, and helped deliver customer ticketing integrations.
+              I also use AI-assisted development to streamline implementation
+              and SDLC tasks while focusing on system-level engineering.
+            </p>
+            <p>
+              Before ReliaQuest, I was a remote Software Engineer Intern at
+              Sumo Capital from March to October 2025, building high-performance
+              C++ software for financial data systems. I also worked as an
+              independent contractor from March 2024 to February 2026, with
+              Covalent Enterprises, LLC as my primary client, delivering
+              software for education and logistics.
+            </p>
+            <p>
               Beyond software engineering, I'm an avid board game enthusiast
               with a special love for space-themed, area-control, and 4X 
               strategy games. I often recommend Dune: Imperium to newcomers 
               looking for a rich, thematic experience, while for those deeply 
               invested in the hobby, nothing compares to the epic, eight-hour 
               space opera of Twilight Imperium: Fourth Edition.
-            </h4>
+            </p>
 
-            {/* Contact */}
-            <div className="mt-4">
+            <div className="about__facts" aria-label="Quick facts">
+              <span><strong>3.91</strong> GPA</span>
+              <span><strong>Summa</strong> Cum Laude</span>
+            </div>
+            <div className="about__actions">
               <a href="#contact" className="btn btn-primary">
-                Contact Me!
+                Send a signal <span aria-hidden="true">↗</span>
               </a>
             </div>
           </div>

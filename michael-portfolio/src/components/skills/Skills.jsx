@@ -4,8 +4,14 @@ import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-5">
-      <h2 className="text-primary text-center mb-3">My Technical Skills</h2>
+    <section id="skills" className="skills-section">
+      <div className="section-heading-wrap">
+        <p className="section-kicker">02 / Equipment</p>
+        <h2 className="section-heading">Tools of the trade.</h2>
+        <p className="section-intro">
+          A practical kit for building, connecting, and shipping dependable software.
+        </p>
+      </div>
 
       <div className="container skills__container">
         {/* Languages */}
@@ -14,14 +20,15 @@ const Skills = () => {
             <h3 className="text-center mb-4">Languages</h3>
             <div className="row row-cols-2">
               {[
-                "Javascript",
+                "Java",
+                "JavaScript",
                 "TypeScript",
-                "C/C++",
+                "C / C++",
                 "Python",
-                "HMTL",
+                "HTML",
                 "CSS",
-                "COBOL",
                 "SQL",
+                "GraphQL",
               ].map((lang) => (
                 <article key={lang} className="skill">
                   <FontAwesomeIcon icon={faCircleCheck} className="icons" />
@@ -39,12 +46,13 @@ const Skills = () => {
             <div className="row row-cols-2">
               {[
                 "Git",
+                "Docker",
+                "Jira",
                 "Firebase",
                 "Supabase",
+                "PostgreSQL",
                 "Google Cloud Platform",
-                "Jira",
-                "Docker",
-                "Azure"
+                "Azure",
               ].map((tool) => (
                 <article key={tool} className="skill col">
                   <FontAwesomeIcon icon={faCircleCheck} className="icons" />
@@ -61,13 +69,13 @@ const Skills = () => {
             <h3 className="text-center mb-4">Libraries/Frameworks</h3>
             <div className="row row-cols-2">
               {[
-                "ReactJS",
-                "NodeJS",
-                "ExpressJS",
+                "Spring Boot",
+                "React.js",
+                "Node.js",
+                "Express.js",
                 "Svelte",
                 "Bulma",
                 "React Native",
-                "PostgreSQL",
               ].map((lib) => (
                 <article key={lib} className="skill col">
                   <FontAwesomeIcon icon={faCircleCheck} className="icons" />

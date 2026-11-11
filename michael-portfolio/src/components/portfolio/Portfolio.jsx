@@ -19,7 +19,7 @@ const data = [
     demo: "https://youtu.be/OYbQwuoWabE",
   },
   {
-    id: 2,
+    id: 3,
     image: BrilliantQR_Thumbnail,
     title: "BrilliantQR",
     github: "",
@@ -29,8 +29,14 @@ const data = [
 
 const Portfolio = () => {
   return (
-    <section id="portfolio" className="py-5">
-      <h2 className="text-primary text-center mb-5">My Recent Projects</h2>
+    <section id="portfolio" className="portfolio-section">
+      <div className="section-heading-wrap">
+        <p className="section-kicker">04 / Artifacts</p>
+        <h2 className="section-heading">Things made during the journey.</h2>
+        <p className="section-intro">
+          A few real-world builds, each with a different problem to solve.
+        </p>
+      </div>
 
       <div className="container">
         <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
@@ -39,9 +45,17 @@ const Portfolio = () => {
               <div className="card portfolio__item h-100">
                 <div className="portfolio__item-image">
                   <img src={image} alt={title} />
+                  <span className="portfolio__image-index">FIELD ARTIFACT / 0{id}</span>
                 </div>
                 <div className="card-body">
                   <h5 className="card-title">{title}</h5>
+                  <p className="portfolio__description">
+                    {title === "Classroom1b"
+                      ? "A classroom companion for recording student behavioral data and supporting educators."
+                      : title === "BrilliantQR"
+                        ? "A QR-code tracking platform built to help a delivery team connect campaigns with real-world engagement."
+                        : "A board-game identifier that turns a camera into a quick way to recognize games from the collection."}
+                  </p>
                   <div className="d-flex gap-2">
                     {github && github.trim() !== "" && (
                       <a
@@ -50,7 +64,7 @@ const Portfolio = () => {
                         target="_blank"
                         rel="noreferrer"
                       >
-                        GitHub
+                        Source
                       </a>
                     )}
                     <a
@@ -59,7 +73,7 @@ const Portfolio = () => {
                       target="_blank"
                       rel="noreferrer"
                     >
-                      Demo
+                      View demo
                     </a>
                   </div>
                 </div>

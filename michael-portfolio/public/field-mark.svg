@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <circle cx="40" cy="40" r="37" fill="#201f18" stroke="#e8a05b" stroke-width="2"/>
+  <text
+    x="40"
+    y="40"
+    fill="#f0bf88"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="46"
+    font-weight="500"
+    letter-spacing="-2"
+    text-anchor="middle"
+    dominant-baseline="central"
+  >M</text>
+</svg>

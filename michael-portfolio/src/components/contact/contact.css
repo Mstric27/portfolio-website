@@ -1,36 +1,100 @@
 .contact__option {
-  background: var(--bs-secondary);
-  padding: 1.2rem;
-  border-radius: 0.75rem;
-  text-align: center;
-  border: 1px solid transparent;
-  transition: all 0.4s ease;
+  padding: 2rem;
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(232, 160, 91, 0.12), transparent 70%),
+    var(--panel);
+  text-align: left;
+  transition: border-color 300ms ease, transform 300ms ease;
 }
 
 .contact__option:hover {
-  background: transparent;
-  border-color: var(--bs-primary);
+  transform: translateY(-4px);
+  border-color: rgba(232, 160, 91, 0.5);
 }
 
 .contact__option-icon {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-  color: var(--bs-primary);
+  color: var(--spice);
+  font-size: 1rem;
 }
 
-/* Narrower contact section */
+.contact__icon-wrap {
+  width: 2.8rem;
+  height: 2.8rem;
+  margin-bottom: 2.5rem;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(232, 160, 91, 0.32);
+  border-radius: 50%;
+  background: rgba(232, 160, 91, 0.08);
+}
+
 .contact__wrapper {
-  max-width: 800px;
+  max-width: 1080px;
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(250px, 0.8fr);
+  gap: 2.5rem;
+}
+
+.contact__wrapper > div:first-child {
+  margin-bottom: 0 !important;
+}
+
+.contact__wrapper form {
+  padding: 1.6rem;
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  background: var(--panel);
+}
+
+.contact__label {
+  margin-bottom: -0.55rem;
+  color: #b7ad98;
+  font: 0.62rem "DM Mono", monospace;
+  letter-spacing: 0.12em;
+}
+
+.contact__wrapper textarea {
+  min-height: 10rem;
+  resize: vertical;
+}
+
+.contact__option .section-kicker {
+  margin-bottom: 0.7rem;
+  font-size: 0.61rem;
+}
+
+.contact__option h4 {
+  margin-bottom: 0.4rem;
+  font: 1.5rem "Playfair Display", Georgia, serif;
+}
+
+.contact__email {
+  display: block;
+  overflow-wrap: anywhere;
+  color: var(--sand-muted);
+  font-size: 0.86rem;
 }
 
 .copy__button {
+  margin-top: 1.3rem;
+  padding: 0;
   background: none;
   border: none;
-  color: var(--bs-primary);
-  font-style: italic;
+  color: var(--spice);
+  font-size: 0.8rem;
+  text-align: left;
 }
 
-.form-control::placeholder {
-  color: var(--bs-light);
+.copy__button:hover {
+  color: #ffd09a;
+}
+
+@media (max-width: 767px) {
+  .contact__wrapper {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
 }

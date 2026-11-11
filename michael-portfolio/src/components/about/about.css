@@ -1,16 +1,125 @@
-/* Profile image box */
-.about__me {
-  aspect-ratio: 1/1;
-  border-radius: 2rem;
-  background: var(--bs-primary);
-  display: grid;
-  place-items: center;
+.about-section {
   overflow: hidden;
-  max-width: 300px;
+}
+
+.about__container {
+  max-width: 1080px;
+}
+
+.about__portrait-wrap {
+  position: relative;
+  width: min(100%, 350px);
   margin: 0 auto;
+  padding: 1.2rem 1.2rem 2.5rem;
+  border: 1px solid rgba(239, 231, 213, 0.13);
+  background: #222119;
+  transform: rotate(-2deg);
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.28);
 }
 
 .about__me-image {
-  border-radius: 2rem;
+  position: relative;
+  aspect-ratio: 2 / 3;
   overflow: hidden;
+  background: #353126;
+}
+
+.about__me-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  filter: grayscale(0.55) saturate(0.78) sepia(0.14);
+  transition: filter 400ms ease, transform 600ms ease;
+}
+
+.about__portrait-wrap:hover .about__me-image img {
+  filter: grayscale(0) saturate(1);
+  transform: scale(1.035);
+}
+
+.about__portrait-index {
+  position: absolute;
+  left: 1.2rem;
+  bottom: 0.6rem;
+  color: #fff3d8;
+  font: 0.56rem "DM Mono", monospace;
+  letter-spacing: 0.1em;
+}
+
+.about__seal {
+  position: absolute;
+  right: -1.5rem;
+  bottom: 1.6rem;
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(232, 160, 91, 0.7);
+  border-radius: 50%;
+  outline: 4px solid var(--ink);
+  color: var(--spice);
+  background: #26241b;
+  transform: rotate(9deg);
+}
+
+.about__seal span {
+  font: 1.5rem/1 "Playfair Display", Georgia, serif;
+}
+
+.about__seal small {
+  margin-top: 0.3rem;
+  font: 0.45rem "DM Mono", monospace;
+  letter-spacing: 0.05em;
+}
+
+.about__copy {
+  color: var(--sand-muted);
+  font-size: 0.98rem;
+}
+
+.about__copy p {
+  margin-bottom: 1.1rem;
+}
+
+.about__copy .about__lead {
+  color: var(--sand);
+  font-size: clamp(1.12rem, 2vw, 1.36rem);
+  line-height: 1.7;
+}
+
+.about__facts {
+  margin-top: 1.7rem;
+  padding-block: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem 1.5rem;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  color: var(--sand-muted);
+  font: 0.66rem "DM Mono", monospace;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.about__facts span {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+}
+
+.about__facts strong {
+  color: var(--spice);
+  font-size: 0.84rem;
+  font-weight: 500;
+}
+
+.about__actions {
+  margin-top: 1.6rem;
+}
+
+.about__actions .btn span {
+  margin-left: 0.35rem;
 }

@@ -37,52 +37,71 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-5">
-      <h2 className="text-primary text-center mb-5">Contact Me</h2>
+    <section id="contact" className="contact-section">
+      <div className="section-heading-wrap">
+        <p className="section-kicker">05 / Make contact</p>
+        <h2 className="section-heading">Have a good problem?</h2>
+        <p className="section-intro">
+          I’m always interested in thoughtful teams and challenging work. Send a signal.
+        </p>
+      </div>
 
-      {/* Scrunched section wrapper */}
       <div className="container contact__wrapper">
-        {/* Contact Form */}
         <div className="mb-5">
           <form ref={form} onSubmit={sendEmail} className="d-flex flex-column gap-3">
+            <label className="contact__label" htmlFor="contact-name">YOUR NAME</label>
             <input
               type="text"
               name="name"
-              placeholder="Your Full Name"
+              id="contact-name"
+              placeholder="How should I address you?"
               className="form-control"
               required
             />
+            <label className="contact__label" htmlFor="contact-email">EMAIL ADDRESS</label>
             <input
               type="email"
               name="email"
-              placeholder="Your Email Address"
+              id="contact-email"
+              placeholder="Where can I reach you?"
               className="form-control"
               required
             />
+            <label className="contact__label" htmlFor="contact-message">MESSAGE</label>
             <textarea
               name="message"
+              id="contact-message"
               rows="7"
-              placeholder="Write your message here..."
+              placeholder="Tell me what you're working on..."
               className="form-control"
               required
             />
             <button type="submit" className="btn btn-primary align-self-start">
-              {messageSent ? "Message Sent!" : "Send a Message!"}
+              {messageSent ? "Signal received" : "Send a signal"}
+              <span aria-hidden="true"> ↗</span>
             </button>
+            <span className="visually-hidden" aria-live="polite">
+              {messageSent ? "Your message has been sent." : ""}
+            </span>
           </form>
         </div>
 
-        {/* Contact Options */}
         <div className="d-flex flex-column gap-3">
           <article className="contact__option">
-            <FontAwesomeIcon icon={faEnvelope} className="contact__option-icon" />
+            <div className="contact__icon-wrap">
+              <FontAwesomeIcon icon={faEnvelope} className="contact__option-icon" />
+            </div>
+            <p className="section-kicker">PREFERRED FREQUENCY</p>
             <h4>Email</h4>
-            <h6 className="text-light">mpstrickland532@gmail.com</h6>
+            <a className="contact__email" href="mailto:mpstrickland532@gmail.com">
+              mpstrickland532@gmail.com
+            </a>
             <button
               onClick={copyEmail}
               className="copy__button"
+              type="button"
             >
-              {messageCopied ? "Email Copied to Clipboard!" : "Copy Email"}
+              {messageCopied ? "Copied to clipboard ✓" : "Copy email address"}
             </button>
           </article>
         </div>

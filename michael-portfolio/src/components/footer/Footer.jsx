@@ -6,13 +6,14 @@ const Footer = () => {
   return (
     <footer>
       <div className="container d-flex flex-column align-items-center">
-        <a href="#" className="footer__logo">
+        <a href="#top" className="footer__logo">
           MICHAEL STRICKLAND
         </a>
 
         <div className="footer__socials d-flex gap-3 mb-3">
           <a
             href="https://www.linkedin.com/in/michael-patrick-strickland"
+            aria-label="LinkedIn profile"
             target="_blank"
             rel="noreferrer"
           >
@@ -20,6 +21,7 @@ const Footer = () => {
           </a>
           <a
             href="https://github.com/Mstric27"
+            aria-label="GitHub profile"
             target="_blank"
             rel="noreferrer"
           >
