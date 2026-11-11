@@ -61,6 +61,23 @@
   resize: vertical;
 }
 
+.contact__status {
+  margin: 0;
+  font-size: 0.84rem;
+}
+
+.contact__status--success {
+  color: #b8cba7;
+}
+
+.contact__status--error {
+  color: #f0a49a;
+}
+
+.contact__status--error a {
+  color: inherit;
+}
+
 .contact__option .section-kicker {
   margin-bottom: 0.7rem;
   font-size: 0.61rem;

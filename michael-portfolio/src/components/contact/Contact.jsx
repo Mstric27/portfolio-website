@@ -6,7 +6,7 @@ import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const form = useRef();
-  const [messageSent, setMessageSent] = useState(false);
+  const [submissionStatus, setSubmissionStatus] = useState("idle");
   const [messageCopied, setmessageCopied] = useState(false);
 
   const copyEmail = () => {
@@ -14,26 +14,23 @@ const Contact = () => {
     setmessageCopied(true);
   }
 
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
+    setSubmissionStatus("sending");
 
-    emailjs
-      .sendForm(
+    try {
+      await emailjs.sendForm(
         "service_7zpil9e",
         "template_2m2ogtd",
         form.current,
         "l5XIifg-V4pP2eFat"
-      )
-      .then(
-        (result) => {
-          form.current.reset();
-          setMessageSent(true);
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
       );
+      form.current.reset();
+      setSubmissionStatus("success");
+    } catch (error) {
+      console.error("EmailJS could not send the contact message:", error);
+      setSubmissionStatus("error");
+    }
   };
 
   return (
@@ -76,13 +73,32 @@ const Contact = () => {
               className="form-control"
               required
             />
-            <button type="submit" className="btn btn-primary align-self-start">
-              {messageSent ? "Signal received" : "Send a signal"}
+            <button
+              type="submit"
+              className="btn btn-primary align-self-start"
+              disabled={submissionStatus === "sending"}
+            >
+              {submissionStatus === "sending"
+                ? "Sending..."
+                : submissionStatus === "success"
+                  ? "Signal sent"
+                  : "Send a signal"}
               <span aria-hidden="true"> ↗</span>
             </button>
-            <span className="visually-hidden" aria-live="polite">
-              {messageSent ? "Your message has been sent." : ""}
-            </span>
+            {submissionStatus === "success" && (
+              <p className="contact__status contact__status--success" role="status">
+                Your message was sent.
+              </p>
+            )}
+            {submissionStatus === "error" && (
+              <p className="contact__status contact__status--error" role="alert">
+                Your message could not be sent. Please email me directly at{" "}
+                <a href="mailto:mpstrickland532@gmail.com">
+                  mpstrickland532@gmail.com
+                </a>
+                .
+              </p>
+            )}
           </form>
         </div>
 
