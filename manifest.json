@@ -1,0 +1,17 @@
+{
+  "short_name": "Michael Strickland",
+  "name": "Michael Strickland's Portfolio",
+  "id": "/",
+  "icons": [
+    {
+      "src": "field-mark.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#171711",
+  "background_color": "#171711"
+}
